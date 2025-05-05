@@ -1,0 +1,37 @@
+（用户头像）调节图片的垂直方向对齐方式：
+vertical-align: middle;
+
+控制 placeholder：
+.search input::placeholder {
+    font-size: 14px;
+    color: #bfbfbf;
+}
+
+通蓝盒子 ：宽度和浏览器一样大，里面再放版心
+
+设置透明度，（.3）表示 0.3 倍透明度
+background-color: rgba(0, 0, 0, .3);
+
+行高属于控制文字的属性，能继承
+line-height: 44px;
+
+让文字水平垂直居中，行高 = 自身高度：
+height: 48px;
+line-height: 48px;
+
+居中：以下两种方法效果等同
+margin: 4px 14px 0;
+margin: 4px auto 0 
+
+阴影：
+box-shadow: 0px 2px 3px 0px rgba(118, 118, 118, .2);
+
+字体去掉加粗：
+font-weight: 400;
+400表示正常 = normal ;
+
+效果要加边边的话，看线的长度是否和文字一致，如果一致，则给文字加
+
+版权：在课程的 li 的 父级 加 clearffix ,li 浮动撑不开父级的高度
+清除浮动（额外添加标签法）
+<div class="content clearfix">
