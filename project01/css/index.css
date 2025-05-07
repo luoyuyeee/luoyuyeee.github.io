@@ -150,6 +150,7 @@ h1 {
     color: #00b4ff;
 }
 
+/* 我的课程表 */
 .banner .right {
     float: right;
     margin-top: 50px;
@@ -181,6 +182,11 @@ h1 {
     color: #4e4e4e;
 }
 
+/* 增加鼠标悬停效果 */
+.banner .right .content dt:hover {
+    color: skyblue;
+}
+
 .banner .right .content dd {
     font-size: 14px;
     color: #4e4e4e;
@@ -200,6 +206,10 @@ h1 {
 
     text-align: center;
     line-height: 40px;
+}
+
+.banner .right .more:hover {
+    background-color: #d1edfd;
 }
 
 /* 精品推荐 */
