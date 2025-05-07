@@ -238,6 +238,12 @@ h1 {
     color: #050505;
 }
 
+/* 精品推荐-导航栏 
+增加鼠标悬停效果 */
+.goods li a:hover {
+    color: #00a4ff;
+}
+
 .goods .hobby {
     float: right;
     font-size: 14px;
@@ -274,6 +280,13 @@ h1 {
     width: 228px;
     height: 270px;
     background-color: #fff;
+
+    /* 增加鼠标悬停过渡效果 */
+    transition: all 0.5s;
+}
+
+.course .content li:hover {
+    box-shadow: 5px 5px 5px 5px skyblue ;
 }
 
 .course .content li:nth-child(5n) {
