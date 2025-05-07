@@ -231,6 +231,10 @@ h1 {
     float: left;
 }
 
+.goods ul li:hover {
+    color: skyblue ;
+}
+
 .goods li a {
     border-left: 1px solid #bfbfbf;
     padding: 0 30px;
