@@ -2,3 +2,36 @@ link按顺序引入，谁在下谁生效
 <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
+
+font: 16px/1.5；
+子大小16，1.5倍的行高
+
+快捷导航，宽度不加，通栏，和浏览器一样大
+.shortcut {
+    height: 52px;
+    background-color: #333;
+}
+
+"手机版"是span标签，宽和高不生效，先加 display: inline-block;
+找手机图标在精灵图中的位置：background-position: -160px -70px;
+文字和图标不对齐：vertical-align: middle;
+
+logo图在盒子里太大，解决方法：
+background-size: contain;
+
+搜索框-放大镜图标定位：子绝父相，永远在搜索框里
+绝对定位的盒子具备行内块特点，宽高生效，不需要display下转换显示模式
+.car span {
+position: absolute;
+    right: -13px;
+    top: -6px;
+    width: 20px;
+    height: 15px;
+    }
+
+版权区域：
+通过伪元素添加标签实现精灵图
+伪元素添加的标签，行内显示模式
+.footer .top li::before {
+    content: '';
+}
