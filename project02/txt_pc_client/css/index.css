@@ -226,5 +226,40 @@
 }
 
 .fresh .bd {
+    position: relative;
+}
 
+.fresh .bd .left {
+    /* float: left; */
+    width: 240px;
+    height: 610px;
+    background-color: pink;
+}
+
+.fresh .bd .right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* float: right; */
+    width: 1000px;
+    height: 610px;
+}
+
+.fresh .bd .right li {
+    float: left;
+    margin-left: 8px;
+    width: 242px;
+    height: 304px;
+    background-color: #f0f9f4;
+    text-align: center;
+}
+
+.fresh .bd .right li img {
+    width: 242px;
+    height: 230px;
+}
+
+.fresh .bd .right li div {
+    color: #9a2e1f;
+    font-size: 17px;
 }
