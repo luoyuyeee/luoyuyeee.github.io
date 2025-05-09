@@ -176,11 +176,13 @@
 }
 
 .footer .top li {
+    position: relative;
     float: left;
     margin-right: 300px;
     width: 195px;
     height: 58px;
-    background-color: pink;
+
+    line-height: 58px;
 }
 
 .footer .top li:last-child {
@@ -189,7 +191,10 @@
 
 /* 伪元素添加的标签，行内显示模式 */
 .footer .top li::before {
-    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* display: inline-block; */
     content: '';
     width: 58px;
     height: 58px;
@@ -197,4 +202,30 @@
     vertical-align: middle;
 }
 
+/* 第二个li里面的 before 添加背景图位置属性 */
+.footer .top li:nth-child(2)::before {
+    background-position: -64px 0;
+}
 
+
+.footer .top li span {
+    margin-left: 77px;
+    font-size: 28px;
+    color: #fff;
+}
+
+.footer .bottom {
+    padding-top: 40px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+}
+
+.footer .bottom  a {
+    font-size: 14px;
+    color: #999;
+}
+
+.footer .bottom p {
+    margin-bottom: 20px;
+}

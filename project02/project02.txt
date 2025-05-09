@@ -35,3 +35,28 @@ position: absolute;
 .footer .top li::before {
     content: '';
 }
+
+行内块和文字无法通过 vertical-align 或 line-height 对齐，使用定位
+
+第二个li里面的 before 添加背景图位置属性
+.footer .top li:nth-child(2)::before {
+    background-position: 0 0;
+}
+
+footer 版权 不需要做优化，实现效果即可
+
+轮播图:有多少个图,就有多少个li
+<li><a href="#"><img src="./uploads/banner_1.png" alt=""></a></li>
+
+display 宽度和父级一样,可以不设 width
+.banner .aside a {
+    display: block;
+    /* width: 250px; */
+    }
+
+轮播图-圆点-当前状态: current / active
+js 找到用户点击的 li 添加类名 li变成选中状态
+
+新鲜好物-li-浮动脱标,清除浮动的影响:
+<div class="bd clearfix">
+脱标:跟谁对齐就找谁,看位置被谁占了
