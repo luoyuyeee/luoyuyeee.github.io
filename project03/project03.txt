@@ -1,0 +1,70 @@
+网站制作流程
+1.客户沟通，制作方案
+2.签订合同
+3.预付定金
+4.初稿审核,网页美工会制作原型图和psd效果图
+5.前台页面设计，后台功能开发
+6.测试验收
+7.上线培训
+8.后期维护
+
+属性书写顺序：
+1.布局定位属性：display、position、float。。。
+2.自身属性：width、height、margin、padding、border、background。。。
+3.文本属性：color、font、text-decoration、text-align。。。
+4.其他属性（CSS3）：content、cursor、border-radius、box-shadow。。。
+
+更换网页图标:放到根目录
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+SEO搜索引擎优化三大标签TDK
+title:网站名-网站的介绍(尽量不超过30字)
+description:简要说明网站做什么
+keywords:页面关键词
+
+常用模块化类名命名:
+快捷导航栏:shortcut
+头部:header
+购物车:shopcar
+热点词:hotwords
+导航左侧:dropdown
+导航右侧:navitems
+页面底部服务模块:mod_service
+页面底部帮助模块:mode_help
+页面底部版权模块:mod_copyright
+
+<a href="#">请登录</a>
+<a href="#">免费注册</a>
+这种写法,两个a之间在浏览器里会出现一个小间隙,在同一行写就不会有
+
+<li>品优购欢迎您! &nbsp;</li>
+其中的 &nbsp; 等于空格,两个文字之间产生间隙
+
+红色字体类,谁需要谁调用
+.style_red {
+    color: #c81623;
+}
+
+快捷导航栏的小竖线做法:把小竖线看作一个盒子,宽度为1
+
+下拉导航的三角图标
+.arrow-icon::after {
+    content: '\e91e';
+}
+''里面的数据从素材里面找到自己想要的样式
+
+多类名写法:既具备xxx的样式,也具备xxx的样式
+<div class="header wrapper">
+
+logo制作SEO优化
+1.logo放 h1 里面
+2.h1 里面再放一个链接,可以返回首页,把logo背景图给链接即可
+3.链接里再放网站名称,但是文字不要显示出来
+  方法一:text-indent移到盒子的外面(text-indent:-9999px;),然后overflow:hidden;淘宝做法
+  方法二:font-size:0;就看不到文字,京东做法
+4.最后给链接一个title属性,这样鼠标放到logo上就可以看到提示文字
+
+dropdown下拉菜单
+
+找精灵图另一个写法:
+background: url(../images/icons.png) no-repeat -252px -5px;
