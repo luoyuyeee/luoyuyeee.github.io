@@ -68,3 +68,33 @@ dropdown下拉菜单
 
 找精灵图另一个写法:
 background: url(../images/icons.png) no-repeat -252px -5px;
+
+ul 里面的 li 因位置不够而掉下来，那么就修改ul 的大小，使其足够装下li
+
+文字溢出变成省略号
+.news-bd ul li {
+    height: 24px;
+    line-height: 24px;
+    //以下三行为文字溢出部分显示省略号
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+强制性要求上传图片的大小固定：
+.recom_bd ul li img {
+    width: 248px;
+    height: 163px;
+}
+
+一般情况下 ，a内如果包含有宽度的盒子，a需要转换为块级元素
+.bb {
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+制作列表页：
+1.新建list.html
+2.把首页的头部和底部复制过来
+3.list.html中还需要引入common.css
+4.新建list.css
