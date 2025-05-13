@@ -1,3 +1,12 @@
+/* 清除点击高亮 */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+/* 禁用长按页面时弹出的菜单 */
+img,
+a {
+    -webkit-touch-callout: none;
+}
 body {
     width: 100%;
     min-width: 320px;
@@ -7,8 +16,6 @@ body {
     font-size: 14px;
     color: #666;
     line-height: 1.5;
-    background-color: #ccc;
-    height: 2000px;
 }
 
 a {
@@ -23,7 +30,7 @@ ul {
 }
 
 img {
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 /* 顶部 */
