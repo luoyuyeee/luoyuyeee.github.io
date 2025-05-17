@@ -1,0 +1,152 @@
+body {
+    min-width: 320px;
+    max-width: 750px;
+    margin: 0 auto;
+    height: 1200px;
+    background-color: #f2f4f7;
+}
+// 约束 当屏幕大于750px 时，html字体大小就再不变化
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 37.5px !important;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #707070;
+}
+
+.wrap {
+    background-color: #fff;
+    padding-bottom: 1.1467rem;
+}
+
+// 头部
+.header {
+    height: 2.1333rem;
+    border-bottom: 1px solid #eaeaea;
+    text-align: center;
+    line-height: 2.1333rem;
+    font-size: .9333rem;
+    color: #1c1c1c;
+}
+
+// 导航
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.2rem 0 1.6rem 0;
+    .item {
+        display: flex;
+        width: 33.33%;
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 3.7067rem;
+            height: 3.7067rem;
+        }
+        span {
+            font-size: .6667rem;
+            color: #707070;
+        }
+        &:nth-child(-n+3) {
+        margin-bottom: 1.6533rem;
+    }
+    }
+}
+
+// 广告
+.go {
+    margin: 0 .2667rem 0 .48rem;
+}
+
+// 就业指导
+.content {
+    padding: 1.0667rem .64rem;
+    background-color: #fff;
+    margin-top: .2667rem;
+    .con-hd {
+        display: flex;
+        justify-content: space-between;
+        height: 1.0133rem;
+        line-height: 1.0133rem;
+        margin-bottom: .9067rem;
+        h4 {
+            margin: 0;
+            font-size: .7467rem;
+            color: #333;
+            .icon {
+                display: inline-block;
+                width: 1.0133rem;
+                height: 1.0133rem;
+                vertical-align: middle;
+            }
+        }
+        .more {
+            font-size: .5867rem;
+            color: #999;
+        }
+    }
+}
+
+// 轮播图
+.get_job_focus {
+    // 添加代码，使左右箭头在图片之外，又在页面之内
+    position: relative;
+    .swiper-container {
+    //   width: 100%;
+      height: 100%;
+    //   根据需求把宽度设置为540px
+      width: 14.4rem;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+    //   自己加的，纵向对齐
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+	  transition: 300ms;
+    //   除中间之外的路边的图片
+	  transform: scale(0.8);
+    //   自己添加代码，除中间外的图片设置透明度
+    opacity: 0.4;
+      a {
+        width: 9.0133rem;
+        height: 10.0267rem;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        p {
+            width: 9.0133rem;
+            font-size: .6667rem;
+            margin-top: .64rem;
+            color: #333;
+        }
+      }
+    }
+    // 当前选定的图片（中间）
+	.swiper-slide-active,
+    .swiper-slide-duplicate-active{
+      transform: scale(1);
+    //   自己添加代码，中间图片压在其他上面
+      z-index: 999;
+    //   添加代码。中间图片不透明
+    opacity: 1;
+	}
+}
