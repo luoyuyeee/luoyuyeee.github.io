@@ -61,7 +61,7 @@
         <!-- 旋转木马 轮播图 -->
          <div class="get_job_focus">
             <!-- Swiper -->
-             <div class="swiper-container">
+             <div class="swiper-container get_job_fo">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <a href="#"><img src="./images/pic.png" alt=""></a>
@@ -83,14 +83,55 @@
      </section>
     <!-- 就业指导 start -->
 
+    <!-- 充电学习 start -->
+     <section class="content">
+        <div class="con-hd">
+            <h4>
+                <span class="icon"><img src="./icons/i2.png" alt=""></span>
+                充电学习</h4>
+            <a href="#" class="more">更多>></a>
+        </div>
+        <!-- 充电学习 轮播图 -->
+        <div class="study">
+             <!-- Swiper -->
+            <div class="swiper mySwiper study_fo">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./images/pic1.png" alt="">
+                <h5>说地道英语，告别中式英语</h5>
+                <p>156人学习</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/pic2.png" alt="">
+                <h5>说地道英语，告别中式英语</h5>
+                <p>156人学习</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/pic1.png" alt="">
+                <h5>说地道英语，告别中式英语</h5>
+                <p>156人学习</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/pic1.png" alt="">
+                <h5>说地道英语，告别中式英语</h5>
+                <p>156人学习</p>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        </div>
+        </div>
+        
+     </section>
+    <!-- 充电学习 start -->
+
 
 <script src="./js/flexible.js"></script>
 <script src="./js/swiper.min.js"></script>
 <script>
     // 第一个函数是 就业指导 轮播图
     (function () {
-        var swiper = new Swiper('.swiper-container', {
-    // 能够显示的个数 
+        var swiper = new Swiper('.get_job_fo', {
+    // 显示的个数 
       slidesPerView: 2,
     // 每个直接的距离
       spaceBetween: 30,
@@ -104,6 +145,17 @@
       },
     });
     })();
+    // 第二个函数 充电学习 轮播图
+    (function() {
+        var swiper = new Swiper(".study_fo", {
+      slidesPerView: 2.2,
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+    })()
   </script>
 </body>
 </html>
