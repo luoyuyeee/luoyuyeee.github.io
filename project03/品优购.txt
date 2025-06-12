@@ -138,3 +138,19 @@ JavaScript制作轮播图
 单独新建一个JS文件，再引入页面中，此时需要添加 load事件
 
 显示隐藏display按钮
+
+动态生成小点点
+1.小点点个数和图片个数一致
+2.首先得到图片张数，图片放进li里面，即li的个数
+3.利用for循环动态生成小点点，小点点放进ol里面
+4.创建节点 createElement（'li'）;
+5.插入节点 ol.appendChild(li);
+6.第一个小点点需要添加current类
+
+精准获取元素，ul太多
+var ul = focus.querySelector('ul');
+
+小点点的排他思想
+1.点击当前小点点，就添加current类
+2.其余小点点移除current类
+3.注意，生成小点点操作中即可直接绑定该点击事件
