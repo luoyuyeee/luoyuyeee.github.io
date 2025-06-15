@@ -60,16 +60,22 @@ window.addEventListener('load', function() {
     // 7.点击右侧按钮,图片滚动一张
     var num = 0;
     var circle = 0;
+    // 节流阀
+    var flag = true;
     // circle 控制小点点的播放
 
     arrow_r.addEventListener('click', function() {
-        // 如果走到最后一张克隆图片,此时ul要快速复原,left改为0
+        if(flag) {
+            flag = false; //关闭节流阀
+            // 如果走到最后一张克隆图片,此时ul要快速复原,left改为0
         if(num == ul.children.length - 1){
             ul.style.left = 0;
             num = 0;
         }
         num++;
-        animate(ul, -num * focusWidth);
+        animate(ul, -num * focusWidth, function() {
+            flag = true; //打开节流阀
+        });
         // 8.点击右侧按钮,小点点跟随一起变化,即再声明一个变量控制小点点的播放
         circle++;
         // 如果circle == 4 ,说明走到最后的克隆图片,就要复原
@@ -78,18 +84,23 @@ window.addEventListener('load', function() {
         }
         // 调用函数
         circleChange();
+        }
     });
 
     // 9.左侧按钮做法
     arrow_l.addEventListener('click', function() {
-        // 如果走到最后一张克隆图片,此时ul要快速复原,left改为0
+        if(flag) {
+            flag = false;
+            // 如果走到最后一张克隆图片,此时ul要快速复原,left改为0
         if(num == ul.children.length - 1){
             num = ul.children.length - 1;
             ul.style.left = -num * focusWidth + 'px';
             
         }
         num--;
-        animate(ul, -num * focusWidth);
+        animate(ul, -num * focusWidth, function() {
+            flag = true;
+        });
         // 8.点击右侧按钮,小点点跟随一起变化,即再声明一个变量控制小点点的播放
         circle++;
         // 如果circle == 4 ,说明走到最后的克隆图片,就要复原
@@ -99,6 +110,7 @@ window.addEventListener('load', function() {
         circle = circle < 0 ? ol.children.length - 1 : circle;
         circleChange();
         
+        }
     });
     function circleChange() {
         // 排他思想

@@ -10,10 +10,11 @@ function animate(obj, target, callback) {
                 // 停止动画，即停止定时器
                 clearInterval(obj.timer);
                 // 回调函数写到定时器结束里面
-                if(callback) {
-                    // 调用函数
-                    callback();
-                }
+                // if(callback) {
+                //     // 调用函数
+                //     callback();
+                // }
+                callback && callback();
             }
             // 步长公式：（目标值 - 当前位置）/ 10
             obj.style.left = obj.offsetLeft + step + 'px';
