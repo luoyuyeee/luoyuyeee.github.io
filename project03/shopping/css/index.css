@@ -12,9 +12,13 @@
     width: 721px;
     height: 455px;
     background-color: purple;
+    overflow: hidden;
 }
 
 .focus ul {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
     width: 600%;
 }
 
@@ -35,6 +39,7 @@
     color: #fff;
     font-family: 'icomoon';
     font-size: 18px;    
+    z-index: 2;
 }
 .arrow-r {
     right: 0;

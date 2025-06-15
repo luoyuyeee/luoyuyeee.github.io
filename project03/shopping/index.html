@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./css/common.css">
     <!-- 引入首页样式文件 -->
      <link rel="stylesheet" href="css/index.css">
+     <!-- animate.js文件必须在index.js的上面引入 -->
+      <script src="js/animate.js"></script>
      <!-- 引入首页JS文件 -->
       <script src="js/index.js"></script>
 </head>
@@ -131,11 +133,11 @@
         <div class="main">
             <div class="focus fl">
                 <!-- 左侧按钮 -->
-                <a href="#" class="arrow-l">
+                <a href="javascript:;" class="arrow-l">
                     &lt;
                 </a>
                 <!-- 右侧按钮 -->
-                <a href="#" class="arrow-r"> > </a>
+                <a href="javascript:;" class="arrow-r"> > </a>
                 <!-- 核心的滚动区域 -->
                 <ul>
                     <li>
@@ -150,6 +152,7 @@
                     <li>
                         <a href="#"><img src="upload/focus1.png" alt=""></a>
                     </li>
+                    
                 </ul>
                 <!-- 小点点 -->
                 <ol class="circle">
